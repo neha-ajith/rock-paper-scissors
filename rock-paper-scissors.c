@@ -9,7 +9,7 @@ int main(){
     printf("Meow! Smudge here! ^_^\n");
     printf("What shall I call you?\n");
     gets(user_name);
-    printf("Nice to meet you,");
+    printf("Nice to meet you, ");
     puts(user_name);
     printf("Let's get started!");
     do{
@@ -41,10 +41,10 @@ int main(){
             smudge_point++;
         }
         else if(num == 3 && ch == 2){
-            printf("And I chose scissors! \nWow i'm good at this!");
+            printf("And I chose scissors! \nWow I'm good at this!");
             smudge_point++;
         }
-        printf("\nWanna go another round? (1 for yes and 0 for no)");
+        printf("\nWanna go another round? (1 for yes and 0 for no) ");
         scanf("%d",&rep);
     }while (rep==1);
     printf("\n\nLet's look at the point table: \n");
@@ -52,6 +52,8 @@ int main(){
     printf("\nAnd you got %d points!", user_point);
     if(smudge_point > user_point)
         printf("\nLooks like i won haha!!!!!");
+    else if(smudge_point = user_point)
+        printf("\nAww tie!!");
     else
         printf("\nLooks like you're good at this. You won!!!");
     
