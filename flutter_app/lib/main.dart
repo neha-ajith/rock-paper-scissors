@@ -49,14 +49,15 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.red[400],
       appBar: AppBar(
         title: Text(
           "Rock - Paper - Scissors !",
           style: TextStyle(
             fontSize: 25.0,
             letterSpacing: 2.0,
-            fontWeight: FontWeight.bold,
-            fontFamily: 'Rubik',
+            fontWeight: FontWeight.w900,
+            fontFamily: 'Roboto',
             color: Colors.red[400],
           ),
         ),
@@ -64,16 +65,12 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
       ),
       body:
+
       Container(
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage("assets/r-p-s.jpg"),
-            fit: BoxFit.fill,
-          )),
         child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(height: 35),
             Center(
               child: Text(
                   '$message',
@@ -81,15 +78,18 @@ class _HomeState extends State<Home> {
                   color: Colors.white,
                   letterSpacing: 0.2,
                   fontSize: 32.0,
-
-                  fontFamily: 'Roboto',
+                  fontFamily: 'Rubik',
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),
+            SizedBox(height: 40),
             Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
+                height: 150,
+                width: 150,
                 child: RaisedButton(
                     onPressed: () {
                       setState(() {
@@ -97,20 +97,14 @@ class _HomeState extends State<Home> {
                         message = output;
                       });
                     },
-                    child: Text(
-                        'Rock',
-                      style: TextStyle(
-                        fontFamily: 'Rubik',
-                        letterSpacing: 0.5,
-                        color: Colors.red[400],
-                        fontSize: 43.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                  padding: EdgeInsets.all(10),
+                  child: Image.asset('assets/rock.jpg'),
                   color: Colors.white,
                 ),
               ),
               SizedBox(
+                height: 150,
+                width: 150,
                 child: RaisedButton(
                   onPressed: () {
                     setState(() {
@@ -118,20 +112,14 @@ class _HomeState extends State<Home> {
                       message = output;
                     });
                   },
-                  child: Text(
-                      'Paper',
-                    style: TextStyle(
-                      fontFamily: 'Rubik',
-                      letterSpacing: 0.5,
-                      color: Colors.red[400],
-                      fontSize: 43.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  padding: EdgeInsets.all(10),
+                  child: Image.asset('assets/paper.jpg'),
                   color: Colors.white,
                 ),
               ),
               SizedBox(
+                height: 150,
+                width: 150,
                 child: RaisedButton(
                   onPressed: () {
                     setState(() {
@@ -139,16 +127,8 @@ class _HomeState extends State<Home> {
                       message = output;
                     });
                   },
-                  child: Text(
-                      'Scissors',
-                    style: TextStyle(
-                      fontFamily: 'Rubik',
-                      letterSpacing: 0.5,
-                      color: Colors.red[400],
-                      fontSize: 43.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  padding: EdgeInsets.all(10),
+                  child: Image.asset('assets/scissors.jpg'),
                   color: Colors.white,
                 ),
               ),
