@@ -70,7 +70,7 @@ class _HomeState extends State<Home> {
         child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(height: 35),
+            SizedBox(height: 10),
             Center(
               child: Text(
                   '$message',
@@ -83,7 +83,7 @@ class _HomeState extends State<Home> {
                 ),
               ),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 20),
             Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
